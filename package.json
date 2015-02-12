@@ -1,0 +1,25 @@
+{
+  "name": "pascals-triangle",
+  "version": "0.1.0",
+  "description": "Coding problem for interviews",
+  "main": "index.js",
+  "bin": {
+    "triangle": "./bin/pascals-triangle"
+  },
+  "scripts": {
+    "start": "jasmine-node --watchFolders bin lib --autoTest spec",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccutestory/interviews.git"
+  },
+  "keywords": [
+    "pascal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-node": "^2.0.0"
+  }
+}
