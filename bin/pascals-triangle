@@ -5,7 +5,6 @@ var Recursive = require('../lib/pascals-triangle/pascals-triangle-recursive'),
 
 var rowNumber = process.argv[2], method = process.argv[3];
 var recursive = new Recursive(), memoize = new Memoize();
-console.log(method, typeof method);
 
 if(process.argv.length < 3 || process.argv.length > 4) {
 	console.log('Must contain a row number and optionally a solve method');
