@@ -12,10 +12,10 @@ if(process.argv.length < 3 || process.argv.length > 4) {
 	return;
 }
 
-if(typeof rowNumber != 'number') {
-	console.log('N must be a number');
-	return;
-}
+//if(typeof rowNumber != 'number') {
+//	console.log('N must be a number');
+//	return;
+//}
 
 if(method != 'recursive' || method != 'memoize') {
 	console.log('If solve method is provided, must be supported.');
