@@ -1,15 +1,31 @@
 #!/usr/bin/env node
 
-var Recursive = require('../lib/pascals-triangle/pascals-triangle-recursive');
-    //Memoize = require('../lib/pascals-triangle/pascals-triangle-memoize');
+var Recursive = require('../lib/pascals-triangle/pascals-triangle-recursive'),
+    Memoize = require('../lib/pascals-triangle/pascals-triangle-memoize');
 
-//if(typeof process.argv[0] != 'number' || process.argv.length < 1 || process.argv.length > 1) {
-//	console.log("N must be a number");
-//	return;
-//}
+var rowNumber = process.argv[2], method = process.argv[3];
+var recursive = new Recursive(), memoize = new Memoize();
 
-var recursive = new Recursive();
-//var memoize = new Memoize();
-var result = recursive.calculate(process.argv[2]);
-console.log('Row ' + process.argv[2] + ' = ' + result);
+if(typeof rowNumber != 'number') {
+	console.log('N must be a number');
+	return;
+}
+
+if(process.argv.length < 3 || process.argv.length > 4) {
+	console.log('Must contain a row number and optionally a solve method');
+	return;
+}
+
+if(method != 'recursive' || method != 'memoize') {
+	console.log('If solve method is provided, must be supported.');
+}
+
+if(process.argv.length === 3 || method === 'recursive') {
+	var result = recursive.calculate(rowNumber);
+}
+else {
+	var result = memoize.calculate(method)
+}
+
 //memoize.calculate(argv[0]);
+console.log('Row ' + rowNumber + ' = ' + result);
