@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var Recursive = require('../lib/pascals-triangle/pascals-triangle-recursive');
+    //Memoize = require('../lib/pascals-triangle/pascals-triangle-memoize');
+
+//if(typeof process.argv[0] != 'number' || process.argv.length < 1 || process.argv.length > 1) {
+//	console.log("N must be a number");
+//	return;
+//}
+
+var recursive = new Recursive();
+//var memoize = new Memoize();
+
+recursive.calculate(process.argv[0]);
+//memoize.calculate(argv[0]);
