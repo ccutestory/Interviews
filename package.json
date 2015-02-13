@@ -4,15 +4,15 @@
   "description": "Coding problem for interviews",
   "main": "index.js",
   "bin": {
-    "triangle": "./bin/pascals-triangle"
+    "pascals-triangle": "./bin/pascals-triangle"
   },
   "scripts": {
     "start": "jasmine-node --watchFolders bin lib --autoTest spec",
-    "test": "test"
+    "test": "jasmine-node spec"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ccutestory/interviews.git"
+    "url": "git@github.com:ccutestory/interviews.git"
   },
   "keywords": [
     "pascal"
