@@ -17,7 +17,7 @@ if(process.argv.length < 3 || process.argv.length > 4) {
 //	return;
 //}
 
-if(method != 'recursive' || method != 'memoize') {
+if(process.argv.length === 4 && (method != 'recursive' || method != 'memoize')) {
 	console.log('If solve method is provided, must be supported.');
 	return;
 }
