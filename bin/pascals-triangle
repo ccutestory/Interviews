@@ -10,8 +10,5 @@ var Recursive = require('../lib/pascals-triangle/pascals-triangle-recursive');
 
 var recursive = new Recursive();
 //var memoize = new Memoize();
-console.log(process.argv[0]);
-console.log(process.argv[1]);
-console.log(process.argv[2]);
-recursive.calculate(process.argv[1]);
+recursive.calculate(process.argv[2]);
 //memoize.calculate(argv[0]);
